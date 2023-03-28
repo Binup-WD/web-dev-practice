@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color:hsl(0, 100%, 74%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family:'Poppins', sans-serif;
+}
+.container{
+    width: 1280px;
+    display: flex;
+}
+
+.left-side{
+    color: white;
+    width: 40%;
+    margin: 50px;
+}
+.main-heading{
+    font-size: 60px;
+    line-height: 1;
+}
+.main-content{
+    margin-top: 15px;
+    font-weight: 500;
+}
+.right-side > .message{
+    background-color: hsl(248, 32%, 49%);
+    padding:15px 20px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow:0 5px 0px 0 rgba(0, 0, 0, 0.4) ;
+}
+.card{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.card form input{
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid hsl(0, 100%, 74%) ;
+    border-radius: 5px;
+}
+input::placeholder, input{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+input:active, input:focus{
+    outline: 1px solid hsl(248, 32%, 49%);
+}
+.input-group{
+    margin: 10px;
+}
+.button{
+    text-transform: uppercase;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: hsl(0, 100%, 74%);
+    font-family:'Poppins', sans-serif ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 0 0px rgba(0, 0, 0, 0.4);
+    font-weight: 500;
+}
+.privacy-message{
+    color: hsl(246, 25%, 77%);
+    margin-top: 10px;
+    font-size: 10px;
+    text-align: center;
+}
+.privacy-message a{
+    text-decoration: none;
+    font-weight: 600;
+}
