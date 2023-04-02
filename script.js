@@ -7,6 +7,8 @@ submitButton.addEventListener("click",function(e){
        let signUpForm=document.forms["signUpForm"];
        let fNameInput=signUpForm.fName;
        let lNameInput=signUpForm.lName;
+       let emailInput=signUpForm.email;
+       let passwordInput=signUpForm.password;
 
        if(fNameInput.value==""){
             errors.fName="First Name Should Not Be Empty";
@@ -20,13 +22,26 @@ submitButton.addEventListener("click",function(e){
        if(lNameInput.value==""){
             errors.lName="Last Name Should Not Be Empty";
 
-            // let lNameGroup=document.getElementById("lNameGroup");
-            // let lNameMessage=document.querySelector("#lNameGroup .message");
-            // lNameMessage.textContent="Last Name Should Not Be Empty";
-            // lNameGroup.classList.add("error");
+            
        }
-       console.log(errors);
 
-for(let error in errors){}
+       if(emailInput.value==""){
+          errors.email="Email should not be empty";
+       }
+
+       if(passwordInput.value.length<=5){
+          errors.password="Password should have min 6 characters";
+       }
+
+for(let error in errors){
+            let lNameGroup=document.getElementById(`${error}Group`);
+            let lNameMessage=document.querySelector(`#${error}Group .message`);
+            lNameGroup.classList.add("error");
+            lNameMessage.textContent=errors[error];
+            
+};
+
+if (Object.keys(errors).length==0){
+     signUpForm.submit();
+}
 });
-
